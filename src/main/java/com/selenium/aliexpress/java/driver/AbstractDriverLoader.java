@@ -25,4 +25,8 @@ public abstract class AbstractDriverLoader {
         }
     }
 
+    protected String normalizeDriverExtension(String path){
+        return SOInfo.isWindows() ? path + ".exe" : path;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.selenium.aliexpress.java.driver;
 
+import com.selenium.aliexpress.java.utils.SOInfo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -15,11 +16,11 @@ public class ChromeWebDriver extends AbstractDriverLoader {
 
         String path = "src/main/resources/drivers/chrome/" + resolveInternalSo() + "/chromedriver";
 
-        System.setProperty("webdriver.chrome.driver", path);
+        System.setProperty("webdriver.chrome.driver", normalizeDriverExtension(path));
 
-         WebDriver driver = new ChromeDriver();
-         driver.manage().window().maximize();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
-         return driver;
+        return driver;
     }
 }

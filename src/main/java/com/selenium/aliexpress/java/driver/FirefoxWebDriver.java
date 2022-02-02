@@ -15,7 +15,7 @@ public class FirefoxWebDriver extends AbstractDriverLoader {
 
         String path = "src/main/resources/drivers/gecko/" + resolveInternalSo() + "/geckodriver";
 
-        System.setProperty("webdriver.gecko.driver", path);
+        System.setProperty("webdriver.gecko.driver", normalizeDriverExtension(path));
 
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
