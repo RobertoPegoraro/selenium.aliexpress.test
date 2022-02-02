@@ -4,7 +4,7 @@ import com.selenium.aliexpress.java.utils.SOInfo;
 
 public abstract class AbstractDriverLoader {
 
-    public static final String WIN32 = "win32";
+    public static final String WIN32 = "win";
 
     public static final String LINUX32 = "linux32";
 
